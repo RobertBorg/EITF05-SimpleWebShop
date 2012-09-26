@@ -1,0 +1,2 @@
+attacks and solutions
+SQL injection - prepared statements
