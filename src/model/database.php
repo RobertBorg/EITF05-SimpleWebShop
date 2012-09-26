@@ -8,8 +8,24 @@ define("PRODUCT", "Product");
 define("SESSION", "Session");
 class Database {
 	public function create($object, $type) {
+		switch ($type) {
+		case USER:
+			break;
+		case PRODUCT:
+			break;
+		case SESSION:
+			break;
+		} 
 	}
 	public function read($id, $type) {
+		switch ($type) {
+		case USER:
+			break;
+		case PRODUCT:
+			break;
+		case SESSION:
+			break;
+		} 
 	}
 }
 ?>
