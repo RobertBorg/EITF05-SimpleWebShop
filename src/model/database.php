@@ -34,7 +34,7 @@ class Database {
 	public function read($id, $type) {
 		switch ($type) {
 		case USER:
-			if ($stmt = $mysqli->prepare("SELECT username,home_address,passsword_hashed,password_salt FROM " . USER . " WHERE username=?")) {
+			if ($stmt = $mysql_conn->prepare("SELECT username,home_address,passsword_hashed,password_salt FROM " . USER . " WHERE username=?")) {
 				$username = "";
 				$home_address = "";
 				$password_hashed = "";
@@ -48,7 +48,7 @@ class Database {
 			}
 			break;
 		case PRODUCT:
-			if ($stmt = $mysqli->prepare("SELECT product_id.name,price FROM " . PRODUCT . " WHERE product_id=?")) {
+			if ($stmt = $mysql_conn->prepare("SELECT product_id.name,price FROM " . PRODUCT . " WHERE product_id=?")) {
 				$product_id = "";
 				$name = "";
 				$price = "";
