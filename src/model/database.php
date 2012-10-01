@@ -34,8 +34,31 @@ class Database {
 	public function read($id, $type) {
 		switch ($type) {
 		case USER:
+			if ($stmt = $mysqli->prepare("SELECT username,home_address,passsword_hashed,password_salt FROM " . USER . " WHERE username=?")) {
+				$username = "";
+				$home_address = "";
+				$password_hashed = "";
+				$password_salt = "";
+				$stmt->execute();
+				$stmt->bind_reslut($username,$home_address,$password_hashed,$password_salt);
+				$stmt->fetch_reslut();
+				$stmt->close();
+				$user = new User($username,$home_address,$password_hashed,$password_salt);
+				return $user;
+			}
 			break;
 		case PRODUCT:
+			if ($stmt = $mysqli->prepare("SELECT product_id.name,price FROM " . PRODUCT . " WHERE product_id=?")) {
+				$product_id = "";
+				$name = "";
+				$price = "";
+				$stmt->execute();
+				$stmt->bind_reslut($product_id,$name,$price);
+				$stmt->fetch_reslut();
+				$stmt->close();
+				$product = new Product($product_id,$name,$price);
+				return $product;
+			}
 			break;
 		case SESSION:
 			break;
