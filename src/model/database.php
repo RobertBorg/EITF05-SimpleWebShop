@@ -24,8 +24,24 @@ class Database {
 	public function create($object, $type) {
 		switch ($type) {
 		case USER:
+			if ($stmt = $mysql_conn->prepare("INSERT INTO ". USER . " ( username, home_address, passsword_hashed, password_salt ) VALUES ( ?, ?, ?, ?)")) {
+				$stmt->bind_param('ssss', $object->username, $object->home_address, $object->password_hashed, $object->password_salt);
+				$stmt->execute();
+				if( $stmt->affected_rows > 0 ) {
+					//success
+				}
+				$stmt->close();
+			}
 			break;
 		case PRODUCT:
+			if ($stmt = $mysql_conn->prepare("INSERT INTO ". PRODUCT . " ( product_id, name, price ) VALUES ( ?, ?, ?)")) {
+				$stmt->bind_param('ssd', $object->product_id, $object->home_address, $object->password_hashed, $object->password_salt);
+				$stmt->execute();
+				if( $stmt->affected_rows > 0 ) {
+					//success
+				}
+				$stmt->close();
+			}
 			break;
 		case SESSION:
 			break;
@@ -35,6 +51,7 @@ class Database {
 		switch ($type) {
 		case USER:
 			if ($stmt = $mysql_conn->prepare("SELECT username,home_address,passsword_hashed,password_salt FROM " . USER . " WHERE username=?")) {
+				$stmt->bind_param('s', $id);
 				$username = "";
 				$home_address = "";
 				$password_hashed = "";
@@ -49,6 +66,7 @@ class Database {
 			break;
 		case PRODUCT:
 			if ($stmt = $mysql_conn->prepare("SELECT product_id.name,price FROM " . PRODUCT . " WHERE product_id=?")) {
+				$stmt->bind_param('s', $id);
 				$product_id = "";
 				$name = "";
 				$price = "";
