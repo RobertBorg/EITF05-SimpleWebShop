@@ -8,7 +8,7 @@
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #595454;
-	margin: 30;
+	/*margin: 0;*/
 	padding: 0;
 	color: #000;
 }
@@ -98,17 +98,22 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
   <div class="header"><a href="#"><img src="../../images/header.jpg" alt="Insert Logo Here" name="SimpleWebShop" width="100%" height="100%" id="Insert_logo" style="background-color: #41383C; display:block;" /></a> 
     <!-- end .header --></div>
   <div class="content">
-  <center>
-    <h2>Sign in Ganon Style!</h2>
-		<p>
-		<form action="login.php">
-			Username: <input type="text" name="userName"><br>
-			Password: <input type="password" name="password"><br> 
-			<p>
-			<input	type="submit" value="Sign In">				
-				<input type="button" value="Register"></p>
-		</form>
-	</center>
+    <h1>Shopping Cart</h1>
+    <h2>Products</h2>
+    <ul>Product, price, amount &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160<button type="button">Remove</button></ul>
+    <ul>Product, price, amount &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160<button type="button">Remove</button></ul>
+    <ul>Product, price, amount &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160</spacer><button type="button">Remove</button></ul>
+    <h2>Address</h2>
+    <form>
+    <ul>Name: <input type="text" name="name"></ul>
+	<ul>Address: <input type="text" name="address"></ul>
+	<ul>Postal code: <input type="text" name="postalCode"></ul>
+	<ul>City: <input type="text" name="city"></ul>
+	<ul>Country: <input type="text" name="country"></ul>
+	<ul>E-mail: <input type="text" name="email"></ul>
+	</form>
+	
+	<ul><input	type="submit" value="Send order"></ul>
     
     <!-- end .content --></div>
   <div class="footer">
