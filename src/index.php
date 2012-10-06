@@ -25,6 +25,9 @@
 			$inputOk = $inputOk && isCSRFGuardOk();
 			if($inputOk){
 				//XXX code create new user
+				$size = mcrypt_get_iv_size(MCRYPT_CAST_256, MCRYPT_MODE_CFB);
+   				$iv = mcrypt_create_iv($size, MCRYPT_DEV_RANDOM);
+				$user = new User($_POST['userName'],sha1($_POST['password'] + $iv),$iv,$_POST['home_address']);
 				include ("./view/SignIn.php");
 			} else {
 				include ("./view/SignUp.php");
