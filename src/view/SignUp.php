@@ -115,10 +115,9 @@ a:hover,a:active,a:focus {
 <body>
 	<div class="container">
 		<div class="header">
-			<a href="#"><img src="../../images/header.jpg"
-				alt="Insert Logo Here" name="SimpleWebShop" width="100%"
-				height="100%" id="Insert_logo"
-				style="background-color: #41383C; display: block;" /></a>
+			<a href="#"><img src="../../images/header.jpg" alt="Insert Logo Here"
+				name="SimpleWebShop" width="100%" height="100%" id="Insert_logo"
+				style="background-color: #41383C; display: block;" /> </a>
 			<!-- end .header -->
 		</div>
 		<div class="content">
@@ -129,32 +128,36 @@ a:hover,a:active,a:focus {
 						<table width="50%" border="0">
 							<tr>
 								<td width="30%">Username:</td>
-								<td width="70%"><input type="text" name="userName"></td>
+								<td width="70%"><input type="text" name="userName">
+								
+								</td>
 							</tr>
-						</table>
-						<table width="50%" border="0">
 							<tr>
 								<td width="30%">Password:</td>
-								<td width="70%"><input type="password" name="password"></td>
+								<td width="70%"><input type="password" name="password">
+								
+								</td>
 							</tr>
-						</table>
-						<table width="50%" border="0">
 							<tr>
 								<td width="30%">Repeat Password:</td>
-								<td width="70%"><input type="password" name="password_reapeat"></td>
+								<td width="70%"><input type="password" name="password_reapeat">
+								
+								</td>
 							</tr>
-						</table>
-						<table width="50%" border="0">
 							<tr>
 								<td width="30%">Home address:</td>
-								<td width="70%"><input type="text" name="home_address"></td>
+								<td width="70%"><input type="text" name="home_address">
+								
+								</td>
 							</tr>
 						</table>
 						<p>
 							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
 							<input type="submit" value="Register">
+						
 						</p>
 					</form>
+			
 			</center>
 
 			<!-- end .content -->

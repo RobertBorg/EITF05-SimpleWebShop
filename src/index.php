@@ -24,15 +24,8 @@
 			$inputOk = $inputOk && isset($_POST['home_address']);
 			$inputOk = $inputOk && isCSRFGuardOk();
 			if($inputOk){
-				$size = mcrypt_get_iv_size(MCRYPT_CAST_256, MCRYPT_MODE_CFB);
-   				$iv = mcrypt_create_iv($size, MCRYPT_DEV_RANDOM);
-				$user = new User($_POST['userName'],sha1($_POST['password'] + $iv),$iv,$_POST['home_address']);
-				$db = new Database();
-				if($db->create($user, USER)) {
-					include ("./view/SignIn.php");
-				}else {
-					include ("./view/SignUp.php");
-				}
+				//XXX code create new user
+				include ("./view/SignIn.php");
 			} else {
 				include ("./view/SignUp.php");
 			}
@@ -45,14 +38,7 @@
 			$inputOk = $inputOk && isCSRFGuardOk();
 			if($inputOk){
 				//XXX code try to login
-				$db = new Database();
-				$user = $db->read($_POST['userName'], USER);
-				if($user->isPasswordCorrect($_POST['password'])) {
-					$_SESSION['user'] = $_POST['userName'];
-					include ("./view/Shop.php");	
-				} else {
-					include ("./view/SignIn.php");
-				}
+				include ("./view/SignIn.php");
 			} else {
 				include ("./view/SignIn.php");
 			}
@@ -62,7 +48,7 @@
 	if(!isset($_SESSION['user'])){
 		session_destroy();
 		session_start();
-		include("./view/SignIn.php");
+		include("./vie	w/SignIn.php");
 		exit;
 	}
 	//Allowed mothods post login
@@ -77,32 +63,23 @@
 			$inputOk = $inputOk && isset($_POST['product_id']);
 			$inputOk = $inputOk && isCSRFGuardOk();
 			if($inputOk){
-				if(!isset($_SESSION['cart'])){
-					$_SESSION['cart'] = array();
-				}
-				if(!isset($_SESSION['cart'][$_POST['product_id']])){
-					$_SESSION['cart'][$_POST['product_id']] = 1;
-				} else {
-					$_SESSION['cart'][$_POST['product_id']]++;
-				}
-				include "./view/Shop.php";
+				
 			} else {
-				//XXX add badboy code?
-				include "./view/Shop.php";
+				
 			}
 			break;
 		case "checkOut":
 			if(isCSRFGuardOk()){
-				include "./view/OrderConfirmation.php";
+				
 			} else {
-				include "./view/Shop.php";
+				
 			}
 			break;
 		case "confirmCheckOut":
 			if(isCSRFGuardOk()){
-				include "./view/Receipt.php.php";
+			
 			} else {
-				include "./view/OrderConfirmation.php";
+			
 			}
 			break;
 		case "removeFromCart":
@@ -110,14 +87,9 @@
 			$inputOk = $inputOk && isset($_POST['product_id']);
 			$inputOk = $inputOk && isCSRFGuardOk();
 			if($inputOk){
-				if(isset($_SESSION['cart'])){
-					if(isset($_SESSION['cart'][$_POST['product_id']])){
-						unset($_SESSION['cart'][$_POST['product_id']]);
-					}
-				}
-				include "./view/Shop.php";
+			
 			} else {
-				include "./view/Shop.php";
+			
 			}
 			break;
 	}

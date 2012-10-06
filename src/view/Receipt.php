@@ -133,15 +133,11 @@ a:hover,a:active,a:focus {
 					<td>price</td>
 					<td>Quantity</td>
 				</tr>
-			</table>
-			<table width="50%" border="0">
 				<tr>
 					<td>Product</td>
 					<td>price</td>
 					<td>Quantity</td>
 				</tr>
-			</table>
-			<table width="50%" border="0">
 				<tr>
 					<td>Product</td>
 					<td>price</td>

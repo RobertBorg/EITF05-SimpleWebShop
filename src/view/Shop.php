@@ -126,10 +126,9 @@ a:hover,a:active,a:focus {
 
 	<div class="container">
 		<div class="header">
-			<a href="#"><img src="../../images/header.jpg"
-				alt="Insert Logo Here" name="SimpleWebShop" width="100%"
-				height="100%" id="Insert_logo"
-				style="background-color: #41383C; display: block;" /></a>
+			<a href="#"><img src="../../images/header.jpg" alt="Insert Logo Here"
+				name="SimpleWebShop" width="100%" height="100%" id="Insert_logo"
+				style="background-color: #41383C; display: block;" /> </a>
 			<!-- end .header -->
 		</div>
 		<div class="content">
@@ -144,15 +143,11 @@ a:hover,a:active,a:focus {
 								<td>price</td>
 								<td><button type="button">Add to cart</button></td>
 							</tr>
-						</table>
-						<table width="100%" border="0">
 							<tr>
 								<td>Product</td>
 								<td>price</td>
 								<td><button type="button">Add to cart</button></td>
 							</tr>
-						</table>
-						<table width="100%" border="0">
 							<tr>
 								<td>Product</td>
 								<td>price</td>
@@ -169,16 +164,12 @@ a:hover,a:active,a:focus {
 								<td>Quantity</td>
 								<td><button type="button">Remove</button></td>
 							</tr>
-						</table>
-						<table width="100%" border="0">
 							<tr>
 								<td>Product</td>
 								<td>price</td>
 								<td>Quantity</td>
 								<td><button type="button">Remove</button></td>
 							</tr>
-						</table>
-						<table width="100%" border="0">
 							<tr>
 								<td>Product</td>
 								<td>price</td>
@@ -196,7 +187,9 @@ a:hover,a:active,a:focus {
 			<!-- end .content -->
 		</div>
 		<div class="footer">
-			<p><a href="url">Sign out</a></p>
+			<p>
+				<a href="url">Sign out</a>
+			</p>
 			<!-- end .footer -->
 		</div>
 		<!-- end .container -->

@@ -134,16 +134,12 @@ a:hover,a:active,a:focus {
 					<td>Quantity</td>
 					<td><button type="button">Remove</button></td>
 				</tr>
-			</table>
-			<table width="50%" border="0">
 				<tr>
 					<td>Product</td>
 					<td>price</td>
 					<td>Quantity</td>
 					<td><button type="button">Remove</button></td>
 				</tr>
-			</table>
-			<table width="50%" border="0">
 				<tr>
 					<td>Product</td>
 					<td>price</td>
@@ -161,9 +157,6 @@ a:hover,a:active,a:focus {
 							
 							</td>
 						</tr>
-					</table>
-
-					<table width="50%" border="0">
 						<tr>
 							<td>VISA CARD:</td>
 							<td><input type="text" name="visa">
