@@ -100,7 +100,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
   <div class="content">
   <center>
     <h2>Sign in Ganon Style!</h2>
-		<p>
+
 		<form action="index.php" method="POST">
 			Username: <input type="text" name="userName"><br>
 			Password: <input type="password" name="password"><br> 
