@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -110,14 +111,6 @@ a:hover,a:active,a:focus {
 	font-size: 1px;
 	line-height: 0px;
 }
-
-#left {
-	float: left
-}
-
-#right {
-	float: right
-}
 -->
 </style>
 </head>
@@ -126,77 +119,48 @@ a:hover,a:active,a:focus {
 
 	<div class="container">
 		<div class="header">
-			<a href="#"><img src="../../images/header.jpg"
-				alt="Insert Logo Here" name="SimpleWebShop" width="100%"
-				height="100%" id="Insert_logo"
-				style="background-color: #41383C; display: block;" /></a>
+			<a href="#"><img src="../../images/header.jpg" alt="Insert Logo Here"
+				name="SimpleWebShop" width="100%" height="100%" id="Insert_logo"
+				style="background-color: #41383C; display: block;" /> </a>
 			<!-- end .header -->
 		</div>
 		<div class="content">
-
-			<table width="100%" border="0">
+			<h1>Receipt</h1>
+			<h2>Products</h2>
+			<table width="50%" border="0">
 				<tr>
-					<td width="50%">
-						<h2>Shopping Ganon Style!</h2>
-						<table width="100%" border="0">
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td><button type="button">Add to cart</button></td>
-							</tr>
-						</table>
-						<table width="100%" border="0">
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td><button type="button">Add to cart</button></td>
-							</tr>
-						</table>
-						<table width="100%" border="0">
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td><button type="button">Add to cart</button></td>
-							</tr>
-						</table>
-					</td>
-					<td width="50%">
-						<h2>Shopping Cart</h2>
-						<table width="100%" border="0">
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td>Quantity</td>
-								<td><button type="button">Remove</button></td>
-							</tr>
-						</table>
-						<table width="100%" border="0">
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td>Quantity</td>
-								<td><button type="button">Remove</button></td>
-							</tr>
-						</table>
-						<table width="100%" border="0">
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td>Quantity</td>
-								<td><button type="button">Remove</button></td>
-							</tr>
-						</table>
-						<div style="text-align: right">
-							<button type="submit" align="right">Checkout!</button>
-						</div>
-					</td>
+					<td>Product</td>
+					<td>price</td>
+					<td>Quantity</td>
 				</tr>
 			</table>
-
+			<table width="50%" border="0">
+				<tr>
+					<td>Product</td>
+					<td>price</td>
+					<td>Quantity</td>
+				</tr>
+			</table>
+			<table width="50%" border="0">
+				<tr>
+					<td>Product</td>
+					<td>price</td>
+					<td>Quantity</td>
+				</tr>
+			</table>
+			<h2>Address</h2>
+			<p>
+				<form>
+					<td>Home Address: address</td> </br>
+					<td>VISA CARD: visa</td>
+				</form>
+			</p>
 			<!-- end .content -->
 		</div>
 		<div class="footer">
-			<p><a href="url">Sign out</a></p>
+			<p>
+				<a href="url">Sign out</a>
+			</p>
 			<!-- end .footer -->
 		</div>
 		<!-- end .container -->
