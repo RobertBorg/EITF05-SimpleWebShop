@@ -54,14 +54,43 @@
 	//Allowed mothods post login
 	switch ($_GET['method']){
 		case "signOut":
+			session_destroy();
+			session_start();
+			include "./view/SignIn.php";
 			break;
 		case "addToCart":
+			$inputOk = true;
+			$inputOk = $inputOk && isset($_POST['product_id']);
+			$inputOk = $inputOk && isCSRFGuardOk();
+			if($inputOk){
+				
+			} else {
+				
+			}
 			break;
 		case "checkOut":
+			if(isCSRFGuardOk()){
+				
+			} else {
+				
+			}
 			break;
 		case "confirmCheckOut":
+			if(isCSRFGuardOk()){
+			
+			} else {
+			
+			}
 			break;
 		case "removeFromCart":
+			$inputOk = true;
+			$inputOk = $inputOk && isset($_POST['product_id']);
+			$inputOk = $inputOk && isCSRFGuardOk();
+			if($inputOk){
+			
+			} else {
+			
+			}
 			break;
 	}
 
