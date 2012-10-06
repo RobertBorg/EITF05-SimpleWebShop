@@ -129,6 +129,7 @@ a:hover,a:active,a:focus {
 					<form action="index.php" method="post">
 						Username: <input type="text" name="userName"><br>
 								Password: <input type="password" name="password"><br>
+								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
 										<p>
 											<input type="submit" value="Sign In"> <input
 												type="button" value="Register">

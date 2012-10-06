@@ -151,6 +151,7 @@ a:hover,a:active,a:focus {
 							</tr>
 						</table>
 						<p>
+							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
 							<input type="submit" value="Register">
 						</p>
 					</form>
