@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,7 +9,7 @@
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #595454;
-	margin: 30;
+	/*margin: 0;*/
 	padding: 0;
 	color: #000;
 }
@@ -74,6 +75,8 @@ a:hover,a:active,a:focus {
 */
 .content {
 	padding: 10px 0;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -116,51 +119,72 @@ a:hover,a:active,a:focus {
 
 	<div class="container">
 		<div class="header">
-			<a href="#"><img src="../../images/header.jpg"
-				alt="Insert Logo Here" name="SimpleWebShop" width="100%"
-				height="100%" id="Insert_logo"
-				style="background-color: #41383C; display: block;" /></a>
+			<a href="#"><img src="../../images/header.jpg" alt="Insert Logo Here"
+				name="SimpleWebShop" width="100%" height="100%" id="Insert_logo"
+				style="background-color: #41383C; display: block;" /> </a>
 			<!-- end .header -->
 		</div>
 		<div class="content">
-			<center>
-				<h2>Sign Up Ganon Style!</h2>
-				<p>
-					<form action="index.php" method="post">
-						<table width="50%" border="0">
-							<tr>
-								<td width="30%">Username:</td>
-								<td width="70%"><input type="text" name="userName"></td>
-							</tr>
-						</table>
-						<table width="50%" border="0">
-							<tr>
-								<td width="30%">Password:</td>
-								<td width="70%"><input type="password" name="password"></td>
-							</tr>
-						</table>
-						<table width="50%" border="0">
-							<tr>
-								<td width="30%">Repeat Password:</td>
-								<td width="70%"><input type="password" name="password_reapeat"></td>
-							</tr>
-						</table>
-						<table width="50%" border="0">
-							<tr>
-								<td width="30%">Home address:</td>
-								<td width="70%"><input type="text" name="home_address"></td>
-							</tr>
-						</table>
-						<p>
-							<input type="submit" value="Register">
-						</p>
-					</form>
-			</center>
+			<h1>Shopping Cart</h1>
+			<h2>Products</h2>
+			<table width="50%" border="0">
+				<tr>
+					<td>Product</td>
+					<td>price</td>
+					<td>Quantity</td>
+					<td><button type="button">Remove</button></td>
+				</tr>
+			</table>
+			<table width="50%" border="0">
+				<tr>
+					<td>Product</td>
+					<td>price</td>
+					<td>Quantity</td>
+					<td><button type="button">Remove</button></td>
+				</tr>
+			</table>
+			<table width="50%" border="0">
+				<tr>
+					<td>Product</td>
+					<td>price</td>
+					<td>Quantity</td>
+					<td><button type="button">Remove</button></td>
+				</tr>
+			</table>
+			<h2>Address</h2>
+			<p>
+				<form>
+					<table width="50%" border="0">
+						<tr>
+							<td>Home Address:</td>
+							<td><input type="text" name="name">
+							
+							</td>
+						</tr>
+					</table>
+
+					<table width="50%" border="0">
+						<tr>
+							<td>VISA CARD:</td>
+							<td><input type="text" name="visa">
+							
+							</td>
+						</tr>
+					</table>
+				</form>
+			</p>
+
+			<ul>
+				<input type="submit" value="Send order">
+			
+			</ul>
 
 			<!-- end .content -->
 		</div>
 		<div class="footer">
-			<p></p>
+			<p>
+				<a href="url">Sign out</a>
+			</p>
 			<!-- end .footer -->
 		</div>
 		<!-- end .container -->

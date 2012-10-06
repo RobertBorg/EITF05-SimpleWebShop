@@ -8,7 +8,7 @@
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #595454;
-	/*margin: 0;*/
+	margin: 30;
 	padding: 0;
 	color: #000;
 }
@@ -74,8 +74,6 @@ a:hover,a:active,a:focus {
 */
 .content {
 	padding: 10px 0;
-	padding-right: 15px;
-	padding-left: 15px;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -115,7 +113,6 @@ a:hover,a:active,a:focus {
 </head>
 
 <body>
-
 	<div class="container">
 		<div class="header">
 			<a href="#"><img src="../../images/header.jpg"
@@ -125,51 +122,48 @@ a:hover,a:active,a:focus {
 			<!-- end .header -->
 		</div>
 		<div class="content">
-			<h1>Shopping Cart</h1>
-			<h2>Products</h2>
-			<table width="50%" border="0">
-				<tr>
-					<td>Product</td>
-					<td>price</td>
-					<td>Quantity</td>
-					<td><button type="button">Remove</button></td>
-				</tr>
-			</table>
-			<table width="50%" border="0">
-				<tr>
-					<td>Product</td>
-					<td>price</td>
-					<td>Quantity</td>
-					<td><button type="button">Remove</button></td>
-				</tr>
-			</table>
-			<table width="50%" border="0">
-				<tr>
-					<td>Product</td>
-					<td>price</td>
-					<td>Quantity</td>
-					<td><button type="button">Remove</button></td>
-				</tr>
-			</table>
-			<h2>Address</h2>
-			<p>
-			<form>
-				Home Address: <input type="text" name="name"><br>
-				VISA CARD: <input type="text" name="visa">
-			</form>
-			</p>
-
-			<ul>
-				<input type="submit" value="Send order">
-			</ul>
+			<center>
+				<h2>Sign Up Ganon Style!</h2>
+				<p>
+					<form action="index.php" method="post">
+						<table width="50%" border="0">
+							<tr>
+								<td width="30%">Username:</td>
+								<td width="70%"><input type="text" name="userName"></td>
+							</tr>
+						</table>
+						<table width="50%" border="0">
+							<tr>
+								<td width="30%">Password:</td>
+								<td width="70%"><input type="password" name="password"></td>
+							</tr>
+						</table>
+						<table width="50%" border="0">
+							<tr>
+								<td width="30%">Repeat Password:</td>
+								<td width="70%"><input type="password" name="password_reapeat"></td>
+							</tr>
+						</table>
+						<table width="50%" border="0">
+							<tr>
+								<td width="30%">Home address:</td>
+								<td width="70%"><input type="text" name="home_address"></td>
+							</tr>
+						</table>
+						<p>
+							<input type="submit" value="Register">
+						</p>
+					</form>
+			</center>
 
 			<!-- end .content -->
 		</div>
 		<div class="footer">
-			<p><a href="url">Sign out</a></p>
+			<p></p>
 			<!-- end .footer -->
 		</div>
 		<!-- end .container -->
 	</div>
+
 </body>
 </html>
