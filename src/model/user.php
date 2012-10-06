@@ -10,5 +10,8 @@ class User {
 		$this->m_password_hashed = $password_hashed;
 		$this->m_password_salt = $password_salt;
 	}
+	public function isPasswordCorrect($testpassword) {
+		return sha1($testpassword + $this->m_password_salt) == $this->m_password_hashed;
+	}
 }
 ?>
