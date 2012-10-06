@@ -167,7 +167,7 @@ a:hover,a:active,a:focus {
 								<td>Product</td>
 								<td>price</td>
 								<td>Quantity</td>
-								<td><button type="button">Add to cart</button></td>
+								<td><button type="button">Remove</button></td>
 							</tr>
 						</table>
 						<table width="100%" border="0">
@@ -175,7 +175,7 @@ a:hover,a:active,a:focus {
 								<td>Product</td>
 								<td>price</td>
 								<td>Quantity</td>
-								<td><button type="button">Add to cart</button></td>
+								<td><button type="button">Remove</button></td>
 							</tr>
 						</table>
 						<table width="100%" border="0">
@@ -183,7 +183,7 @@ a:hover,a:active,a:focus {
 								<td>Product</td>
 								<td>price</td>
 								<td>Quantity</td>
-								<td><button type="button">Add to cart</button></td>
+								<td><button type="button">Remove</button></td>
 							</tr>
 						</table>
 						<div style="text-align: right">
