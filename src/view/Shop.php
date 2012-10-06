@@ -141,17 +141,12 @@ a:hover,a:active,a:focus {
 							<tr>
 								<td>Product</td>
 								<td>price</td>
-								<td><button type="button">Add to cart</button></td>
-							</tr>
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td><button type="button">Add to cart</button></td>
-							</tr>
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td><button type="button">Add to cart</button></td>
+								<td>
+								<form action="index.php?method=addToCart" method="post">
+								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+								<input type="submit" value="Add to cart">
+								</form>
+								</td>
 							</tr>
 						</table>
 					</td>
@@ -160,25 +155,21 @@ a:hover,a:active,a:focus {
 						<table width="100%" border="0">
 							<tr>
 								<td>Product</td>
-								<td>price</td>
 								<td>Quantity</td>
-								<td><button type="button">Remove</button></td>
-							</tr>
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td>Quantity</td>
-								<td><button type="button">Remove</button></td>
-							</tr>
-							<tr>
-								<td>Product</td>
-								<td>price</td>
-								<td>Quantity</td>
-								<td><button type="button">Remove</button></td>
+								<td>
+								<form action="index.php?method=removeFromCart" method="post">
+								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+								<input type="submit" value="Remove from cart">
+								</form>
+								</td>
 							</tr>
 						</table>
 						<div style="text-align: right">
-							<button type="submit" align="right">Checkout!</button>
+							<form action="index.php?method=checkOut" method="post">
+							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+							<input type="submit" value="Check out!">
+							</form>
+							
 						</div>
 					</td>
 				</tr>
@@ -188,7 +179,10 @@ a:hover,a:active,a:focus {
 		</div>
 		<div class="footer">
 			<p>
-				<a href="url">Sign out</a>
+				<form action="index.php?method=signOut" method="post">
+							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+							<input type="submit" value="Sign out">
+							</form>
 			</p>
 			<!-- end .footer -->
 		</div>

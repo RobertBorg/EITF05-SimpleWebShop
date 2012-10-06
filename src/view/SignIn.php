@@ -131,8 +131,7 @@ a:hover,a:active,a:focus {
 								Password: <input type="password" name="password"><br>
 								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
 										<p>
-											<input type="submit" value="Sign In"> <input
-												type="button" value="Register">
+											<input type="submit" value="Sign In"> <a href="index.php?method=signUp" >Sign up</a>
 										</p>
 					</form>
 			</center>

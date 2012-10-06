@@ -130,26 +130,12 @@ a:hover,a:active,a:focus {
 			<table width="50%" border="0">
 				<tr>
 					<td>Product</td>
-					<td>price</td>
 					<td>Quantity</td>
-					<td><button type="button">Remove</button></td>
-				</tr>
-				<tr>
-					<td>Product</td>
-					<td>price</td>
-					<td>Quantity</td>
-					<td><button type="button">Remove</button></td>
-				</tr>
-				<tr>
-					<td>Product</td>
-					<td>price</td>
-					<td>Quantity</td>
-					<td><button type="button">Remove</button></td>
 				</tr>
 			</table>
 			<h2>Address</h2>
-			<p>
-				<form>
+			<form action="index.php?method=confirmCheckOut" method="post">
+				<p>
 					<table width="50%" border="0">
 						<tr>
 							<td>Home Address:</td>
@@ -164,11 +150,12 @@ a:hover,a:active,a:focus {
 							</td>
 						</tr>
 					</table>
-				</form>
-			</p>
-
-			<ul>
+				</p>
+	
+				<ul>
+				<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
 				<input type="submit" value="Send order">
+			</form>
 			
 			</ul>
 
