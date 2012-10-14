@@ -126,10 +126,10 @@ a:hover,a:active,a:focus {
 			<center>
 				<h2>Sign in Ganon Style!</h2>
 				<p>
-					<form action="index.php" method="post">
+					<form action="index.php?method=signIn" method="post">
 						Username: <input type="text" name="userName"><br>
 								Password: <input type="password" name="password"><br>
-								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+								<?php  echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '">';?>
 										<p>
 											<input type="submit" value="Sign In"> <a href="index.php?method=signUp" >Sign up</a>
 										</p>

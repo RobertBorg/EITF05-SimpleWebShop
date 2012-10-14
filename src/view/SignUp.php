@@ -124,7 +124,7 @@ a:hover,a:active,a:focus {
 			<center>
 				<h2>Sign Up Ganon Style!</h2>
 				<p>
-					<form action="index.php" method="post">
+					<form action="index.php?method=signUp" method="post">
 						<table width="50%" border="0">
 							<tr>
 								<td width="30%">Username:</td>
@@ -150,10 +150,17 @@ a:hover,a:active,a:focus {
 								
 								</td>
 							</tr>
+							<tr>
+								
+								<td >
+									<input type="submit" value="Register">
+									<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '">';?>
+									
+								</td>
+							</tr>
 						</table>
 						<p>
-							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
-							<input type="submit" value="Register">
+							
 						
 						</p>
 					</form>

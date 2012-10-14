@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -128,28 +127,23 @@ a:hover,a:active,a:focus {
 			<h1>Receipt</h1>
 			<h2>Products</h2>
 			<table width="50%" border="0">
+			<?php foreach($_SESSION['cart'] as $key => $value) { ?>
 				<tr>
-					<td>Product</td>
-					<td>price</td>
-					<td>Quantity</td>
+				<?php 
+				$db = new Database();
+				$prod = $db->read($key, PRODUCT);
+					
+					echo '<td>' . $prod->m_name . '</td>';
+					echo '<td>'. $prod->m_price .'</td>';
+					echo '<td>'. $value .'</td>';
+				?>
 				</tr>
-				<tr>
-					<td>Product</td>
-					<td>price</td>
-					<td>Quantity</td>
-				</tr>
-				<tr>
-					<td>Product</td>
-					<td>price</td>
-					<td>Quantity</td>
-				</tr>
+			<?php }?>
 			</table>
 			<h2>Address</h2>
 			<p>
-				<form>
-					<td>Home Address: address</td> </br>
-					<td>VISA CARD: visa</td>
-				</form>
+				<td>Home Address: <?php echo $_SESSION['address']; unset($_SESSION['address']);?></td> </br>
+				<td>VISA CARD: <?php echo $_SESSION['visa']; unset($_SESSION['visa']);?></td>
 			</p>
 			<!-- end .content -->
 		</div>

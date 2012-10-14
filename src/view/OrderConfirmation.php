@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -128,10 +127,12 @@ a:hover,a:active,a:focus {
 			<h1>Shopping Cart</h1>
 			<h2>Products</h2>
 			<table width="50%" border="0">
+			<?php foreach($_SESSION['cart'] as $key => $value) { ?>
 				<tr>
-					<td>Product</td>
-					<td>Quantity</td>
+				<td><?php echo $key; ?></td>
+				<td><?php echo $value; ?></td>
 				</tr>
+			<?php }?>
 			</table>
 			<h2>Address</h2>
 			<form action="index.php?method=confirmCheckOut" method="post">
@@ -139,7 +140,8 @@ a:hover,a:active,a:focus {
 					<table width="50%" border="0">
 						<tr>
 							<td>Home Address:</td>
-							<td><input type="text" name="name">
+							<td>
+							<?php $db = new Database(); $user =  $db->read($_SESSION['user'], USER); echo '<input type="text" name="address" value="' . $user->m_home_address . '">' ?>
 							
 							</td>
 						</tr>
@@ -153,7 +155,7 @@ a:hover,a:active,a:focus {
 				</p>
 	
 				<ul>
-				<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+				<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '">';?>
 				<input type="submit" value="Send order">
 			</form>
 			

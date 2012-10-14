@@ -138,35 +138,49 @@ a:hover,a:active,a:focus {
 					<td width="50%">
 						<h2>Shopping Ganon Style!</h2>
 						<table width="100%" border="0">
-							<tr>
-								<td>Product</td>
-								<td>price</td>
+						<?php
+						$db =  new Database();
+						$arr = $db->getAllProducts();
+						foreach ( $arr as $prod){ ?>
+							
+						
+								<tr>
+								<td><?php echo $prod->m_name; ?></td>
+								<td><?php echo $prod->m_price;?></td>
 								<td>
 								<form action="index.php?method=addToCart" method="post">
-								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+								<?php echo '<input type="hidden" name="product_id" value="'. $prod->m_product_id .'">'; ?>
+								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '">';?>
 								<input type="submit" value="Add to cart">
 								</form>
 								</td>
+						<?php }
+						?>
 							</tr>
 						</table>
 					</td>
 					<td width="50%">
 						<h2>Shopping Cart</h2>
 						<table width="100%" border="0">
+						<?php foreach($_SESSION['cart'] as $key => $value) { ?>
+							
 							<tr>
-								<td>Product</td>
-								<td>Quantity</td>
+								<td><?php echo $key; ?></td>
+								<td><?php echo $value; ?></td>
 								<td>
 								<form action="index.php?method=removeFromCart" method="post">
-								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+								<?php echo '<input type="hidden" name="product_id" value="' . $key . '">';?>
+								<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '">';?>
 								<input type="submit" value="Remove from cart">
 								</form>
 								</td>
 							</tr>
+						<?php }?>
+							
 						</table>
 						<div style="text-align: right">
 							<form action="index.php?method=checkOut" method="post">
-							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '">';?>
 							<input type="submit" value="Check out!">
 							</form>
 							
@@ -178,9 +192,9 @@ a:hover,a:active,a:focus {
 			<!-- end .content -->
 		</div>
 		<div class="footer">
-			<p>
+			<p> logged in: <?php echo $_SESSION['user'];?>
 				<form action="index.php?method=signOut" method="post">
-							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '"';?>
+							<?php echo '<input type="hidden" name="CSRFGuard" value="' . $_SESSION['CSRFGuard'] . '">';?>
 							<input type="submit" value="Sign out">
 							</form>
 			</p>

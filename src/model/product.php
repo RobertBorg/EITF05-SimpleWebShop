@@ -1,8 +1,8 @@
 <?php
 class Product {
-	private $m_product_id;
-	private $m_name;
-	private $m_price;
+	public $m_product_id;
+	public $m_name;
+	public $m_price;
 	public function __construct($product_id, $name, $price) {
 		$this->m_product_id = $product_id;
 		$this->m_name = $name;
